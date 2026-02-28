@@ -16,43 +16,45 @@ h1, p{
 }
 
 .wrapper{
-    height: 100%;
+    min-height: 100vh;
     background-color: #ccc;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 .page1{
     width: 393px;
-    height: 852px;
+    min-height: 100vh;
     background-color: #fff;
     display: block;
     margin-left: auto;
     margin-right: auto;
     display: flex; 
     justify-content: center;
-    align-items: center
+    align-items: center;
+    position: relative;
+    padding-top: 80px
 }
 .page1 .logo{
-    display: inline-block;
+    display: flex;
     width: 55px;
     height: 55px;
     overflow: hidden;
-    position: fixed; /* 固定位置 */
-    top: 10px;       /* 距離頂部 10px (可調整) */
-    left: 37%;      /* 距離左側 10px (可調整) */
-    z-index: 1000;   /* 確保在其他內容之上 */
+    left: 0%;      /* 距離左側 10px (可調整) */
+       /* 確保在其他內容之上 */
     width: 100px;    /* Logo 寬度 (可調整) */
-
+    top: 0;
+    position: absolute;
 }
 
 .page1 .logo img{
     height: 100%;
     display: block;
+    position: absolute;
 }
 .page1 .box{
     width: 341px;
     height: 389px;
-    vertical-align: center;
+    /* vertical-align: center; */
     justify-content: center;
     background-color:#ACCCE0;
     }
@@ -71,21 +73,21 @@ h1, p{
     margin-left: 30px;
 }
 
-.underline1::after{
+/* .underline1::after{
   content: '';
   display: inline-block;
   width: 200px;
   border-bottom: 1px solid #fff;
   margin-left: 10px;
-}
+} */
 
-.underline2::after {
+/* .underline2::after {
   content: '';
   display: inline-block;
   width: 200px; 
   border-bottom: 1px solid #fff;
   margin-left: 10px; 
-}
+} */
 
 .divider{
     display: flex;
@@ -149,3 +151,12 @@ h1, p{
     display: block;
 }
 
+input{
+    width: 200px;
+    margin-left: 10px;
+    border-bottom:1px solid #fff;
+    background-color: #ACCCE0;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+}
